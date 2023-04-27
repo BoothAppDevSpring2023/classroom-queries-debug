@@ -22,8 +22,7 @@
         <th>
         </th>
       </tr>
-
-      <% @list_of_department.each do |department| %>
+      <% @list_of_departments.each do |department| %>
       <tr>
         <td>
           <%= department.id %>
@@ -34,9 +33,10 @@
         </td>
 
         <td>
-          <a href="/departments/<%= department.id %>">
-            Show details
-          </a>
+          <a href="<%= departments_path(department.id) %>">
+          Show details
+        </a>
+
         </td>
       </tr>
       <% end %>

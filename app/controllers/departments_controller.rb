@@ -7,13 +7,13 @@ class DepartmentsController < ApplicationController
     render({ :template => "departments/index.html.erb" })
   end
 
+
+
   def show
-    the_id = params.fetch("path_id")
-
-    matching_departments = Department.where({ :id => the_id })
-
-    @the_department = matching_departments
-
+    the_id = params.fetch("id")
+    @the_department = Department.find(the_id)
+    @courses = Course.where({ :department_id => @the_department.id })
     render({ :template => "departments/show.html.erb" })
   end
+  
 end

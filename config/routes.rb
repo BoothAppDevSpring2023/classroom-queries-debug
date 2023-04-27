@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # READ
   get("/departments", { :controller => "departments", :action => "index" })
   
-  get("/departments/:path_id", { :controller => "departments", :action => "show" })
+  get("/departments/:id", { :controller => "departments", :action => "show" })
 
   #------------------------------
 
@@ -22,8 +22,8 @@ Rails.application.routes.draw do
           
   # READ
   get("/enrollments", { :controller => "enrollments", :action => "index" })
+  get("/enrollments/:id", { :controller => "enrollments", :action => "show" })
   
-  get("/enrollments/:path_id", { :controller => "enrollments", :action => "show" })
 
   #------------------------------
 
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   # READ
   get("/students", { :controller => "students", :action => "index" })
   
-  get("/students/:path_id", { :controller => "students", :action => "show" })
+  get("/students/:id", { :controller => "students", :action => "show" })
 
   #------------------------------
 

@@ -13,18 +13,27 @@
     </div>
 
     <dl>
-      <dt>
-        Name
-      </dt>
-      <dd>
-        <%= @the_department.name %>
-      </dd>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @the_department.name %>
+  </dd>
+
+  <dt>
+    Number of courses
+  </dt>
+  <dd>
+    <%= Course.where({ :department_id => @the_department.id }).count %> 
+  </dd>
+</dl>
+
 
       <dt>
-        Number of courses
+        Department name
       </dt>
       <dd>
-        <%= Course.where({ :department_id => @the_department.id }).count %> 
+       <%= @the_department.name %>
       </dd>
 
     </dl>
